@@ -1,0 +1,87 @@
+<html>
+
+<head>
+  <title>foo</title>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    html, body, #map {
+      height: 100%;
+    }
+
+    #map {
+      display: none; 
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/base/css/leaflet.css" type="text/css">
+
+  <script type='text/javascript'></script>
+  
+  <script type="text/javascript" src="/base/js/lib/jquery/jquery.js"></script> 
+  <script type="text/javascript" src="/base/js/lib/leaflet.js"></script> 
+
+</head>
+
+<body>
+  <!-- <canvas id="canvas" keepalive="true" width='600' height='600' style='outline: 1px solid black;'></canvas> -->
+  
+  <div id="map"></div>
+
+  <a class="foursquareauth" href="https://foursquare.com/oauth2/authenticate?client_id=MCONJUGORWRYV3O12MWDCUAUHH0WHVV4PAOLIRK42Z5PN0BN&amp;response_type=token&amp;redirect_uri=http://jollywalker.dev/">link with foursquare</a>
+  
+  <script type='text/javascript'>
+  $(function() {
+
+    var params = window.location.hash.substr(1).split('=');
+    if (params.length > 1) {
+      var auth = params[1];
+      $('.foursquareauth').hide();
+      $('#map').show();
+    }
+
+    window.map = new L.Map('map');
+
+    var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/62930/256/{z}/{x}/{y}.png',
+        cloudmadeAttribution = 'Map ©2012 OSM/CloudMade. Data ©2012 foursquare',
+        cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+
+    map.addLayer( cloudmade );
+
+    map.setView(new L.LatLng( 51.544303, -0.051344 ), 15).addLayer(cloudmade);
+
+    // map.locateAndSetView(16);
+
+    // map.on('locationfound', onLocationFound);
+
+    // function onLocationFound(e) {
+    //   var radius = e.accuracy / 2;
+    //   var marker = new L.Marker(e.latlng);
+
+    //   map.addLayer(marker);
+    //   marker.bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    //   var circle = new L.Circle(e.latlng, radius);
+    //   map.addLayer(circle);
+    // }
+
+    // map.on('locationerror', onLocationError);
+
+    // function onLocationError(e) {
+    //   alert(e.message);
+    // }
+
+
+    // $.getJSON('https://api.foursquare.com/v2/venues/search?ll=40.7,-74&oauth_token=ZUX1IEBBXVCDZ305PSTJULXRG3PFIK4W2LN2W01BRI4WI2BR&v=20120519', function(response){
+    //   window.response = response;
+    //   $('body').html( response.response.venues[0].name );
+    // });
+  })
+  </script>
+
+</body>
+
+</html>
