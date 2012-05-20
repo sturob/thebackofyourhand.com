@@ -79,7 +79,7 @@
       var circle = new L.Circle(e.latlng, radius);
       v.map.addLayer(circle);
 
-      window.startScan( v.map )
+      //window.startScan( v.map )
     }
   });
 
