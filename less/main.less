@@ -1,0 +1,32 @@
+@import "../base/less/_reset";
+@import "../base/less/_utils";
+
+
+canvas {
+  opacity: 0.6;
+}
+
+em {
+  color: #999;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+html, body, #map, canvas {
+  height: 100%;
+}
+
+canvas {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  pointer-events: none;
+}
+
+#map {
+  z-index: 9;
+  display: none; 
+}
