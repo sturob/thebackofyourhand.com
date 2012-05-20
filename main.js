@@ -54,7 +54,7 @@
       cluster(e.latlng);
     });
 
-    $.getJSON('/latest.json', function(code){
+    $.getJSON('latest.json', function(code){
       window.initial = new Function('with (v.inputs) { ' + code.functions.initial + '\n } ' );
       window.instant = new Function('with (v.inputs) { ' + code.functions.instant + '\n } ' );
 
@@ -79,10 +79,15 @@
       var circle = new L.Circle(e.latlng, radius);
       v.map.addLayer(circle);
 
-      //window.startScan( v.map )
+      window.startScan( v.map )
     }
+
+    $('.reload button').click(function() {
+      window.refetch();
+    });
   });
 
+  
 
 
     // map.on('locationerror', onLocationError);
