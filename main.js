@@ -22,9 +22,10 @@
     var params = window.location.hash.substr(1).split('=');
 
     if (params.length > 1) {
+
       var auth = params[1];
       $('.foursquareauth').hide();
-      $('#map').show();
+      $('#map, #canvas').show();
     };
 
     paper.install( window );
@@ -77,7 +78,7 @@
       var circle = new L.Circle(e.latlng, radius);
       v.map.addLayer(circle);
 
-      window.startScan( v.map )
+      //window.startScan( v.map )
     }
   });
 

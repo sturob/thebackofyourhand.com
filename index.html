@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>foo</title>
+  <title>geo pixie</title>
 
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -34,12 +34,21 @@
 </head>
 
 <body>
-  <div id="canvas">
+  <div id="canvas" style="display: none">
     <canvas keepalive="true"></canvas>
   </div>
   <div id="map"></div>
 
-  <a class="foursquareauth" href="https://foursquare.com/oauth2/authenticate?client_id=MCONJUGORWRYV3O12MWDCUAUHH0WHVV4PAOLIRK42Z5PN0BN&amp;response_type=token&amp;redirect_uri=http://jollywalker.dev/">link with foursquare</a>
+  <div class="foursquareauth">
+    <h1>We'll have you on your way soon, but first  <a href="https://foursquare.com/oauth2/authenticate?client_id=MCONJUGORWRYV3O12MWDCUAUHH0WHVV4PAOLIRK42Z5PN0BN&amp;response_type=token&amp;redirect_uri=http://jollywalker.dev/">please authorise with foursquare</a></h1>
+
+    <p>Note: we store nothing and only use foursquare to search for places you might like to go</p>
+  </div>
+
+  <div style="display:none" class="reload">
+    <div class="status"></div>
+    <button>Search here</button>
+  </div>
 
 </body>
 
