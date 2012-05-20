@@ -22,11 +22,12 @@
     var params = window.location.hash.substr(1).split('=');
 
     if (params.length > 1) {
-
       var auth = params[1];
       $('.foursquareauth').hide();
       $('#map, #canvas').show();
-    };
+    } else {
+      return;
+    }
 
     paper.install( window );
     paper.setup( $('canvas')[0] ); // Create
