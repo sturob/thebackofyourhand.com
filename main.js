@@ -60,28 +60,28 @@
       instant();
       window.onFrame = new Function('with (v.inputs) { ' + code.functions.paperjs + '\n } ' );
 
-      window.startScan( v.map )
+      v.map.locate();
     });  
 
+    v.map.on('locationfound', onLocationFound);
+
+    function onLocationFound(e) {
+      var radius = e.accuracy / 2;
+      // var marker = new L.Marker(e.latlng);
+
+      v.map.panTo( e.latlng );
+
+      // v.map.addLayer(marker);
+      //marker.bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+      var circle = new L.Circle(e.latlng, radius);
+      v.map.addLayer(circle);
+
+      window.startScan( v.map )
+    }
   });
 
 
-
-
-    // map.locateAndSetView(16);
-
-    // map.on('locationfound', onLocationFound);
-
-    // function onLocationFound(e) {
-    //   var radius = e.accuracy / 2;
-    //   var marker = new L.Marker(e.latlng);
-
-    //   map.addLayer(marker);
-    //   marker.bindPopup("You are within " + radius + " meters from this point").openPopup();
-
-    //   var circle = new L.Circle(e.latlng, radius);
-    //   map.addLayer(circle);
-    // }
 
     // map.on('locationerror', onLocationError);
 
