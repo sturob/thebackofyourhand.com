@@ -24,8 +24,10 @@
     if (params.length > 1) {
       var auth = params[1];
       $('.foursquareauth').hide();
-      $('#map').show();
-    };
+      $('#map, #canvas').show();
+    } else {
+      return;
+    }
 
     paper.install( window );
     paper.setup( $('canvas')[0] ); // Create
@@ -52,7 +54,7 @@
       cluster(e.latlng);
     });
 
-    $.getJSON('/latest.json', function(code){
+    $.getJSON('latest.json', function(code){
       window.initial = new Function('with (v.inputs) { ' + code.functions.initial + '\n } ' );
       window.instant = new Function('with (v.inputs) { ' + code.functions.instant + '\n } ' );
 
@@ -79,8 +81,13 @@
 
       window.startScan( v.map )
     }
+
+    $('.reload button').click(function() {
+      window.refetch();
+    });
   });
 
+  
 
 
     // map.on('locationerror', onLocationError);
