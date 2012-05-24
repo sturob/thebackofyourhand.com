@@ -42,7 +42,7 @@
     window.v.map = new L.Map('map');
 
     var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/62930/256/{z}/{x}/{y}.png',
-        cloudmadeAttribution = 'Map ©2012 OSM/CloudMade. Data ©2012 foursquare',
+        cloudmadeAttribution = '©2012 OSM, CloudMade + foursquare',
         cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
 
     v.map.addLayer( cloudmade );
