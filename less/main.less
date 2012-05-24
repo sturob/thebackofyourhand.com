@@ -37,7 +37,7 @@ canvas {
 .foursquareauth {
 	margin: 2em;
 	p {
-	font-weight: lighter;
+	 font-weight: lighter;
 	}
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .leaflet-popup-content {
-	line-height: 1.6em !important;	
+	line-height: 1.6em !important;
 }
 
 .leaflet-container .leaflet-control-attribution {
@@ -60,14 +60,23 @@ h1 {
 }
 
 
+.reload {
+  position: absolute; 
+  z-index: 10000; 
+  left: 8px; 
+  bottom: 8px;     
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 4px;
+}
+
 .reload button {
-   font-size: 1.4em;
-   position: absolute; 
-   z-index: 10000; 
-   left: 8px; 
-   bottom: 8px;
-   text-align: center;
-   border: 1px solid #999;
-   -webkit-border-radius: 3px;
+  margin: 4px;
+  font-size: 1.2em;
+  border: 0;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  -webkit-border-radius: 4px;
 }
 
