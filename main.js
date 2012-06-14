@@ -52,8 +52,12 @@
     v.map.boxZoom.disable();
 
     v.map.off('click').on('click', function(e) {
-      cluster(e.latlng);
+      cluster.gather(e.latlng);
     });
+
+    v.canvasTiles = new L.TileLayer.Canvas();
+    v.canvasTiles.drawTile = function(canvas, tilePoint, zoom) { }
+    v.map.addLayer(v.canvasTiles);
 
     $.getJSON('latest.json', function(code){
       window.initial = new Function('with (v.inputs) { ' + code.functions.initial + '\n } ' );
@@ -64,9 +68,13 @@
       window.onFrame = new Function('with (v.inputs) { ' + code.functions.paperjs + '\n } ' );
 
       v.map.locate();
+
+      v.map.on('moveend', window.refetch);
+      v.map.on('zoomend', window.refetch);
+      v.map.on('locationfound', onLocationFound);
     });  
 
-    v.map.on('locationfound', onLocationFound);
+    
 
     function onLocationFound(e) {
       var radius = e.accuracy / 2;
@@ -83,9 +91,10 @@
       window.startScan( v.map )
     }
 
-    $('.reload button').click(function() {
-      window.refetch();
-    });
+
+    // $('.reload button').click(function() {
+    //   window.refetch();
+    // });
   });
 
   
