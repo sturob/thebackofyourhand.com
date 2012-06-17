@@ -32,16 +32,16 @@
     paper.install( window );
     paper.setup( $('canvas')[0] ); // Create
 
-    (function animloop() {
-      requestAnimFrame( animloop );
-      window.onFrame();
-      paper.view.draw();
-    })();
+    // (function animloop() {
+    //   requestAnimFrame( animloop );
+    //   window.onFrame();
+    //   paper.view.draw();
+    // })();
 
 
     window.v.map = new L.Map('map');
 
-    var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/62930/256/{z}/{x}/{y}.png',
+    var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/65492/256/{z}/{x}/{y}.png',
         cloudmadeAttribution = '©2012 OSM, CloudMade + foursquare',
         cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18,  detectRetina: true, attribution: cloudmadeAttribution});
 
