@@ -1,1 +1,270 @@
+/* Css Reset by Eric Meyer */
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+/* clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack */
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+/*.conceal {
+  border-color: transparent transparent #aaa transparent; top: 9px;
+}
 
+.reveal {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 12px;
+  right: 6px;
+  border-color: #aaa transparent transparent transparent;
+  border-style: solid;
+  border-width: 3px;
+  width: 0;
+  height: 0;        
+}*/
+.wtf {
+  outline: 2px solid red;
+}
+canvas {
+  opacity: 0.8;
+}
+#canvas canvas {
+  opacity: 0.6;
+}
+em {
+  color: #999;
+  font-style: normal;
+}
+body {
+  font-family: "Helvetica Neue", Sans;
+  padding: 0;
+  margin: 0;
+  line-height: 3.4em;
+}
+html,
+body,
+#map,
+#canvas canvas {
+  height: 100%;
+}
+#canvas canvas {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  pointer-events: none;
+}
+#map {
+  z-index: 9;
+  display: none;
+}
+.foursquareauth {
+  margin: 2em;
+}
+.foursquareauth p {
+  font-weight: lighter;
+}
+a {
+  color: #99f;
+}
+h1 {
+  font-size: 2em;
+  font-weight: lighter;
+  padding-bottom: 12px;
+}
+.leaflet-popup-content {
+  line-height: 1.6em !important;
+}
+.leaflet-container .leaflet-control-attribution {
+  font: 9px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+.reload {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  left: 8px;
+  bottom: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 4px;
+}
+.reload button {
+  margin: 4px;
+  font-size: 1.2em;
+  border: 0;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 4px;
+}
