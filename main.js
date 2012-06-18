@@ -1,6 +1,7 @@
 
   window.onFrame = function(){ }; 
 
+
   window.v = { // has to match studio
     inputs: {
       highpass: 10,
@@ -29,8 +30,8 @@
       return;
     }
 
-    paper.install( window );
-    paper.setup( $('canvas')[0] ); // Create
+    //paper.install( window );
+    //paper.setup( $('canvas')[0] ); // Create
 
     // (function animloop() {
     //   requestAnimFrame( animloop );
@@ -51,10 +52,6 @@
     v.map.setView(new L.LatLng( 51.522225,-0.109496 ), 16).addLayer(cloudmade);
     v.map.boxZoom.disable();
 
-    v.map.off('click').on('click', function(e) {
-      cluster.gather(e.latlng);
-    });
-
     v.canvasTiles = new L.TileLayer.Canvas();
     v.canvasTiles.drawTile = function(canvas, tilePoint, zoom) { }
     v.map.addLayer(v.canvasTiles);
@@ -69,8 +66,8 @@
 
       v.map.locate();
 
-      v.map.on('moveend', window.refetch);
-      v.map.on('zoomend', window.refetch);
+      v.map.on('moveend', _.throttle(window.refetch, 1000));
+      //v.map.on('zoomend', window.refetch);
       v.map.on('locationfound', onLocationFound);
     });  
 
