@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>geo pixie</title>
+  <title>step off</title>
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
@@ -13,22 +13,39 @@
 
   <link id="styles" rel="stylesheet" href="css/main.css" type="text/css">
 
-  <script>
-    styles.rel = 'stylesheet/less';
-    styles.href = 'less/main.less';
-  </script>
+  <script type="text/javascript">
+  (function(){
+    var hostname = window.location.hostname;
+    window.loadjs = function (file) {
+          document.write( unescape("%3Cscript src='" + file + "' type='text/javascript'%3E%3C/script%3E") );
+        }
 
-  <script src="base/js/lib/less.js"></script> 
+    window.CONFIG = {
+      devMode: (hostname.substr(-3)  == 'dev' || hostname.substr(0,3) == '192' || 
+                hostname == 'localhost' || window.location.origin == "file://")
+    };
+    
+    if (CONFIG.devMode) { // switch in .less for dev
+      var l = document.getElementById('styles');
+      l.rel = 'stylesheet/less';
+      l.href = 'less/main.less';
+      loadjs('base/js/lib/less.js');
+    }
+  })();
+  </script>
   
   <link rel="stylesheet" href="base/css/leaflet.css" type="text/css">
 
   <script src="base/js/lib/jquery/jquery.js"></script> 
   <script src="base/js/lib/leaflet.js"></script> 
   <script src="/base/js/lib/chainvas.js"></script>
-  <!-- // <script src="base/js/lib/canvas/paper.js"></script>  -->
   <script src="base/js/lib/underscore.js"></script> 
   <script src="base/js/utils.js"></script>
-  <script src="base/js/dev.js"></script>
+
+  <script  type="text/javascript">
+    if (CONFIG.devMode) loadjs('base/js/dev.js');
+  </script>
+
   <script src="main.js"></script>
 
 </head>
@@ -42,7 +59,7 @@
   <div class="foursquareauth">
     <h1>We'll have you on your way soon, but first  <a href="https://foursquare.com/oauth2/authenticate?client_id=2YR33TS505QZQJNYIXEBOYLELJEPTLNAO4LVBRA3QJS3Z421&amp;response_type=token&amp;redirect_uri=http://geopixie.com/">please authorise foursquare</a></h1>
 
-    <p>Note: we store nothing and only use foursquare to search for places you might like to go</p>
+    <p>Note: we store none of your info &amp; only use foursquare to search for places near you</p>
   </div>
 
   <div class="reload">
