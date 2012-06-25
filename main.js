@@ -49,7 +49,7 @@
 
     v.map.addLayer( cloudmade );
 
-    v.map.setView(new L.LatLng( 51.522225,-0.109496 ), 16).addLayer(cloudmade);
+    v.map.setView(new L.LatLng( 51.522225,-0.109496 ), 15).addLayer(cloudmade);
     v.map.boxZoom.disable();
 
     v.canvasTiles = new L.TileLayer.Canvas();
@@ -66,7 +66,9 @@
 
       v.map.locate();
 
-      v.map.on('moveend', _.throttle(window.refetch, 1000));
+      window.throttledFetch = _.throttle(window.refetch, 1000);
+      v.map.on('moveend', window.throttledFetch);
+      
       //v.map.on('zoomend', window.refetch);
       v.map.on('locationfound', onLocationFound);
     });  
