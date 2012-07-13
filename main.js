@@ -46,10 +46,9 @@
         cloudmadeAttribution = '©2012 OSM, CloudMade + foursquare',
         cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18,  detectRetina: true, attribution: cloudmadeAttribution});
 
-
     v.map.addLayer( cloudmade );
 
-    v.map.setView(new L.LatLng( 51.522225, -0.109496 ), 15).addLayer(cloudmade);
+    v.map.setView(new L.LatLng( 51.522225, -0.109496 ), 12).addLayer(cloudmade);
     v.map.boxZoom.disable();
 
     v.canvasTiles = new L.TileLayer.Canvas();
@@ -66,11 +65,13 @@
 
       v.map.locate();
 
-      window.throttledFetch = _.throttle(window.refetch, 1000);
-      v.map.on('moveend', window.throttledFetch);
+      //window.throttledFetch = _.throttle(window.refetch, 1000);
+      //v.map.on('moveend', window.throttledFetch);
 
       //v.map.on('zoomend', window.refetch);
       v.map.on('locationfound', onLocationFound);
+
+      Categories.fetch( v.Venue.loadByScore );
     });  
 
     
@@ -79,7 +80,7 @@
       var radius = e.accuracy / 2;
       // var marker = new L.Marker(e.latlng);
 
-      v.map.panTo( e.latlng );
+//      v.map.panTo( e.latlng );
 
       // v.map.addLayer(marker);
       //marker.bindPopup("You are within " + radius + " meters from this point").openPopup();
@@ -87,7 +88,7 @@
       var circle = new L.Circle(e.latlng, radius);
       v.map.addLayer(circle);
 
-      window.startScan( v.map )
+//      window.startScan( v.map )
     }
 
 
