@@ -204,7 +204,7 @@ canvas {
   opacity: 0.6;
 }
 em {
-  color: #999;
+  color: #777;
   font-style: normal;
 }
 body {
@@ -248,6 +248,42 @@ h1 {
 }
 .leaflet-container .leaflet-control-attribution {
   font: 9px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-box-shadow: 0 1px 14px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.5) !important;
+}
+.leaflet-popup-content {
+  padding: 0 !important;
+}
+.leaflet-popup-content-wrapper {
+  -webkit-border-radius: 4px !important;
+  border-radius: 0 !important;
+  padding: 0px 0 1px 0 !important;
+}
+.leaflet-popup-content-wrapper div.venue {
+  position: relative;
+  top: 8px;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.leaflet-popup-content-wrapper div.postcodes {
+  position: absolute;
+  bottom: -2px;
+  right: 2px;
+  color: #ddd;
+  font-size: 10px;
+  text-shadow: 0px 2px 2px #000;
+}
+.leaflet-popup-content-wrapper div.others {
+  color: #ddd;
+  text-shadow: 0px 2px 2px #000;
+  position: absolute;
+  bottom: -2px;
+  left: 2px;
+  font-size: 10px;
 }
 .reload {
   display: none;
