@@ -48,13 +48,8 @@
 
     v.map.addLayer( cloudmade );
 
-    v.map.setView(new L.LatLng( 51.522225, -0.109496 ), 11).addLayer(cloudmade);
-    v.map.boxZoom.disable();
-
-    v.canvasTiles = new L.TileLayer.Canvas();
-    v.canvasTiles.drawTile = function(canvas, tilePoint, zoom) { }
-    v.map.addLayer(v.canvasTiles);
-
+    v.map.setView(new L.LatLng( 51.522225, -0.109496 ), 13).addLayer(cloudmade);
+  
     $.getJSON('latest.json', function(code){
       window.initial = new Function('with (v.inputs) { ' + code.functions.initial + '\n } ' );
       window.instant = new Function('with (v.inputs) { ' + code.functions.instant + '\n } ' );
