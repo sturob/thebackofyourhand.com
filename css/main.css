@@ -227,7 +227,7 @@ body,
 }
 #map {
   z-index: 9;
-  display: none;
+  display: block;
 }
 .foursquareauth {
   margin: 2em;

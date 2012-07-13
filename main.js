@@ -22,13 +22,13 @@
 
     var params = window.location.hash.substr(1).split('=');
 
-    if (params.length > 1) {
-      var auth = params[1];
-      $('.foursquareauth').hide();
-      $('#map, #canvas').show();
-    } else {
-      return;
-    }
+    // if (params.length > 1) {
+    //   var auth = params[1];
+    //   $('.foursquareauth').hide();
+    //   $('#map, #canvas').show();
+    // } else {
+    //   return;
+    // }
 
     //paper.install( window );
     //paper.setup( $('canvas')[0] ); // Create
@@ -48,7 +48,7 @@
 
     v.map.addLayer( cloudmade );
 
-    v.map.setView(new L.LatLng( 51.522225, -0.109496 ), 12).addLayer(cloudmade);
+    v.map.setView(new L.LatLng( 51.522225, -0.109496 ), 11).addLayer(cloudmade);
     v.map.boxZoom.disable();
 
     v.canvasTiles = new L.TileLayer.Canvas();
@@ -71,6 +71,7 @@
       //v.map.on('zoomend', window.refetch);
       v.map.on('locationfound', onLocationFound);
 
+      v.dataPoint = '/data/';
       Categories.fetch( v.Venue.loadByScore );
     });  
 
