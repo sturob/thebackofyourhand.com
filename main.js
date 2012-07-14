@@ -75,16 +75,14 @@
     function onLocationFound(e) {
       var radius = e.accuracy / 2;
       // var marker = new L.Marker(e.latlng);
-
-//      v.map.panTo( e.latlng );
-
+      // v.map.panTo( e.latlng );
       // v.map.addLayer(marker);
       //marker.bindPopup("You are within " + radius + " meters from this point").openPopup();
 
-      var circle = new L.Circle(e.latlng, radius);
+      var circle = new L.Circle(e.latlng, radius, { color: '#fff', fillColor: '#fff' });
       v.map.addLayer(circle);
 
-//      window.startScan( v.map )
+//    window.startScan( v.map )
     }
 
 

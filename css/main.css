@@ -258,6 +258,10 @@ h1 {
 .leaflet-popup-content {
   padding: 0 !important;
 }
+.leaflet-container .leaflet-control-attribution {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
 .leaflet-popup-content-wrapper {
   -webkit-border-radius: 4px !important;
   border-radius: 0 !important;
