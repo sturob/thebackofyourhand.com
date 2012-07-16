@@ -197,6 +197,40 @@ select {
 .wtf {
   outline: 2px solid red;
 }
+div#meh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+}
+div#meh > div#bright_switch {
+  height: 36px;
+  width: 112px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 8px 8px 8px 9px;
+  background-color: rgba(40, 40, 40, 0.6);
+  -webkit-border-radius: 8px;
+}
+div#meh > div#bright_switch div {
+  float: left;
+  width: 36px;
+  height: 36px;
+  margin-right: 1px;
+}
+div#meh > div#bright_switch div#a {
+  background: black;
+}
+div#meh > div#bright_switch div#b {
+  background: gray;
+}
+div#meh > div#bright_switch div#c {
+  background: #ccc;
+}
+div#meh > div#bright_switch div.selected {
+  outline: 1px solid white;
+}
 canvas {
   opacity: 0.8;
 }
