@@ -242,11 +242,10 @@ div#meh #progress {
   left: 140px;
   right: 140px;
   color: #eee;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(90, 90, 90, 0.7);
 }
 div#meh #progress .message {
-  padding: 12px 12px 4px 12px;
-  height: 24px;
+  padding: 12px 12px 4px 23px;
   text-shadow: 0px 2px 2px #000;
 }
 div#meh #progress .wrap {

@@ -67,7 +67,7 @@
       v.map.on('locationfound', onLocationFound);
 
       v.dataPoint = '/data/';
-      Categories.fetch( v.Venue.loadByScore );
+      Categories.fetch( v.Venue.loadByCategory );
     });  
 
     
