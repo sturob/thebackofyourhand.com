@@ -1,0 +1,145 @@
+
+div#meh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10000;
+  pointer-events: none;
+
+  
+  > div#bright_switch {
+    height: 36px;
+    width: 112px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px 8px 8px 9px;
+    background-color: rgba(40,40,40,0.6);
+    -webkit-border-radius: 8px;
+    pointer-events: auto;
+
+    div {
+      float: left;
+      width: 36px;
+      height: 36px;
+      margin-right: 1px;
+    }
+    div#a { background: black;}
+    div#b { background: gray;}
+    div#c { background: #ccc;}
+
+    div.selected {
+      outline: 2px solid white;
+    }
+  }
+
+  #progress {
+    z-index: 20000;
+    position: absolute;
+    bottom: 20px;
+    left: 140px;
+    right: 140px;
+    color: #eee;
+    background: rgba(0,0,0,0.7);
+    .message {
+      padding: 12px 12px 4px 12px;
+      height: 24px;
+      text-shadow: 0px 2px 2px #000;
+    }
+
+    .wrap { 
+      position: relative;
+    }
+    .bar {
+      height: 24px;
+      background: red;
+    }
+  }
+
+}
+
+
+  .leaflet-popup-content {
+    line-height: 1.6em !important;
+  }
+
+  .leaflet-container .leaflet-control-attribution {
+    font: 9px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+  }
+
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: rgba(255,255,255,0.8) !important;
+    -webkit-box-shadow: 0 1px 14px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 1px 14px rgba(0,0,0,0.5) !important;
+  }
+
+  .leaflet-popup-content {
+    padding: 0 !important;
+  }
+
+  .leaflet-container .leaflet-control-attribution {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .leaflet-popup-content-wrapper {
+    -webkit-border-radius: 4px !important;
+    border-radius: 0 !important;
+    padding: 0px 0 1px 0 !important;
+
+
+    
+
+
+    div.venue {
+      position: relative;
+      top: 8px;
+      margin-left: -12px;
+      margin-right: -12px;
+      padding-left: 16px;
+      // background: white;
+      b  {
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.3);
+        display: block;
+        width: 8px;
+        content: '';
+        height: 8px;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        padding: 0 !important;
+      }
+      a  {
+        // text-decoration: none;
+        color: #333;
+      }
+      em {
+        padding-left: 2px;
+      }
+    }
+
+    div.postcodes {
+      position: absolute;
+      bottom: -2px;
+      right: 2px;
+      color: #ddd;
+      font-size: 10px;
+      text-shadow: 0px 2px 2px #000;
+    }
+
+    div.others {
+      color: #ddd;
+      text-shadow: 0px 2px 2px #000;
+      position: absolute;
+      bottom: -2px;
+      left: 2px;
+      font-size: 10px;
+      // text-align: center;
+      // right: 0;
+    }
+
+  }
