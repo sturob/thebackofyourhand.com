@@ -7,7 +7,27 @@ div#meh {
   bottom: 0;
   z-index: 10000;
   pointer-events: none;
+  
+  > div#locate {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    pointer-events: auto;
 
+
+    .button {
+      color: #222;
+      width: 1em;
+      height: 1em;
+      padding:  0;
+      text-align: center;
+      background-color: rgba(230,230,230,0.8);
+      -webkit-border-radius: 22px;
+      border-radius: 22px;
+      border: 3px solid #222;
+      font-size: 36px;
+    }
+  }
   
   > div#bright_switch {
     height: 36px;
