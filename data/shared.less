@@ -9,47 +9,47 @@ div#meh {
   pointer-events: none;
   
   .button {
-    color: #222;
-    width: 1em;
-    height: 1em;
-    padding:  0;
+    opacity: 1;
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.8),
+                 0px 0px 15px rgba(0,0,0,0.8);
+
+    padding: 16px;
+    display: block;
+    // outline: 1px solid transparent;
     text-align: center;
-    background-color: rgba(230,230,230,0.8);
-    -webkit-border-radius: 22px;
-    border-radius: 22px;
-    border: 3px solid #222;
-    font-size: 36px;
+    font-size: 20px;
   }
 
   > div#help {
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 0px;
+    right: 0px;
   }
 
   > div#locate {
     position: absolute;
-    bottom: 12px;
-    left: 12px;
+    bottom: 0px;
+    left: 0px;
     pointer-events: auto;
   }
   
   > div#bright_switch {
-    // height: 36px;
     width: 36px;
     position: absolute;
     top: 8px;
     right: 8px;
     padding: 8px 8px 8px 9px;
-    background-color: rgba(40,40,40,0.6);
-    -webkit-border-radius: 8px;
+
+
+    background-color: rgba(140,140,140,0.6);
     pointer-events: auto;
 
     div {
-      // float: left;
       width: 36px;
       height: 36px;
-      // margin-bottom: 1px !im;
       position: relative;
       z-index: 99;
     }
@@ -96,10 +96,27 @@ div.leaflet-control-attribution {
 
 div.leaflet-control-zoom {
   // .leaflet-control-zoom-out leaflet-control-zoom-in
+  background: none; //rgba(140,140,140,0.5);
+
   > a {
     width: 32px !important;
-    height: 32px !important;
+    // height: 32px !important;
+    background: rgba(140,140,140,0.5);
+    border-radius: 0;
+    color: #fff;
+    // outline: 1px solid #000;
+    opacity: 1 !important;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px 4px 12px 4px;
+    text-align: center;
+    text-shadow: 0px 2px 2px #000;
   }
+
+  > a:active, a:hover {
+    background: #333;
+  }
+
 }
 
 

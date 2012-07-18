@@ -1,0 +1,20 @@
+
+.icon-direction-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x41;&nbsp;'); }
+.icon-direction { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x61;&nbsp;'); }
+.icon-help-circle { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x3f;&nbsp;'); }
+.icon-resize-full { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2f;&nbsp;'); }
+.icon-resize-full-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x58;&nbsp;'); }
+.icon-resize-full-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x78;&nbsp;'); }
+.icon-resize-small-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x59;&nbsp;'); }
+.icon-resize-small { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5c;&nbsp;'); }
+.icon-resize-small-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x79;&nbsp;'); }
+.icon-zoom-in { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5d;&nbsp;'); }
+.icon-zoom-in-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2b;&nbsp;'); }
+.icon-zoom-in-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-zoom-out-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-zoom-out { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5b;&nbsp;'); }
+.icon-zoom-out-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2d;&nbsp;'); }
+.icon-target { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6f;&nbsp;'); }
+.icon-target-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4f;&nbsp;'); }
+.icon-target-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2e;&nbsp;'); }
+.icon-target-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f3af;&nbsp;'); }

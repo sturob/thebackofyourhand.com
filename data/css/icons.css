@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'icons';
+  src: url("../font/icons.eot");
+  src: url("../font/icons.eot?#iefix") format('embedded-opentype'), url("../font/icons.woff") format('woff'), url("../font/icons.ttf") format('truetype'), url("../font/icons.svg#icons") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.7;
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+/* fix buttons height */
+  line-height: 1em;
+/* you can be more comfortable with increased icons size */
+/* font-zize: 120%; */
+}
+
+.icon-direction-1:before { content: '\41'; } /* 'A' */
+.icon-direction:before { content: '\61'; } /* 'a' */
+.icon-help-circle:before { content: '\3f'; } /* '?' */
+.icon-resize-full:before { content: '\2f'; } /* '/' */
+.icon-resize-full-1:before { content: '\58'; } /* 'X' */
+.icon-resize-full-alt:before { content: '\78'; } /* 'x' */
+.icon-resize-small-1:before { content: '\59'; } /* 'Y' */
+.icon-resize-small:before { content: '\5c'; } /* '\' */
+.icon-resize-small-alt:before { content: '\79'; } /* 'y' */
+.icon-zoom-in:before { content: '\5d'; } /* ']' */
+.icon-zoom-in-2:before { content: '\2b'; } /* '+' */
+.icon-zoom-in-1:before { content: '\e800'; } /* '' */
+.icon-zoom-out-1:before { content: '\e801'; } /* '' */
+.icon-zoom-out:before { content: '\5b'; } /* '[' */
+.icon-zoom-out-2:before { content: '\2d'; } /* '-' */
+.icon-target:before { content: '\6f'; } /* 'o' */
+.icon-target-2:before { content: '\4f'; } /* 'O' */
+.icon-target-1:before { content: '\2e'; } /* '.' */
+.icon-target-3:before { content: '🎯'; } /* '\1f3af' */
