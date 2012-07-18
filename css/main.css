@@ -221,6 +221,7 @@ div#meh > div#help {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  pointer-events: auto;
 }
 div#meh > div#locate {
   position: absolute;
