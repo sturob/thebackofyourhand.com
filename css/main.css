@@ -206,13 +206,7 @@ div#meh {
   z-index: 10000;
   pointer-events: none;
 }
-div#meh > div#locate {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  pointer-events: auto;
-}
-div#meh > div#locate .button {
+div#meh .button {
   color: #222;
   width: 1em;
   height: 1em;
@@ -224,9 +218,19 @@ div#meh > div#locate .button {
   border: 3px solid #222;
   font-size: 36px;
 }
+div#meh > div#help {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+div#meh > div#locate {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  pointer-events: auto;
+}
 div#meh > div#bright_switch {
-  height: 36px;
-  width: 112px;
+  width: 36px;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -236,10 +240,10 @@ div#meh > div#bright_switch {
   pointer-events: auto;
 }
 div#meh > div#bright_switch div {
-  float: left;
   width: 36px;
   height: 36px;
-  margin-right: 1px;
+  position: relative;
+  z-index: 99;
 }
 div#meh > div#bright_switch div#a {
   background: black;
@@ -251,14 +255,15 @@ div#meh > div#bright_switch div#c {
   background: #ccc;
 }
 div#meh > div#bright_switch div.selected {
-  outline: 2px solid white;
+  z-index: 100;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #333333;
 }
 div#meh #progress {
   z-index: 20000;
   position: absolute;
   bottom: 20px;
-  left: 140px;
-  right: 140px;
+  left: 10%;
+  right: 10%;
   color: #eee;
   background: rgba(90, 90, 90, 0.7);
 }
@@ -270,8 +275,15 @@ div#meh #progress .wrap {
   position: relative;
 }
 div#meh #progress .bar {
-  height: 24px;
-  background: red;
+  height: 16px;
+  background: #fff;
+}
+div.leaflet-control-attribution {
+  display: none !important;
+}
+div.leaflet-control-zoom > a {
+  width: 32px !important;
+  height: 32px !important;
 }
 .leaflet-popup-content {
   line-height: 1.6em !important;

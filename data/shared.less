@@ -8,30 +8,35 @@ div#meh {
   z-index: 10000;
   pointer-events: none;
   
+  .button {
+    color: #222;
+    width: 1em;
+    height: 1em;
+    padding:  0;
+    text-align: center;
+    background-color: rgba(230,230,230,0.8);
+    -webkit-border-radius: 22px;
+    border-radius: 22px;
+    border: 3px solid #222;
+    font-size: 36px;
+  }
+
+  > div#help {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
   > div#locate {
     position: absolute;
     bottom: 12px;
     left: 12px;
     pointer-events: auto;
-
-
-    .button {
-      color: #222;
-      width: 1em;
-      height: 1em;
-      padding:  0;
-      text-align: center;
-      background-color: rgba(230,230,230,0.8);
-      -webkit-border-radius: 22px;
-      border-radius: 22px;
-      border: 3px solid #222;
-      font-size: 36px;
-    }
   }
   
   > div#bright_switch {
-    height: 36px;
-    width: 112px;
+    // height: 36px;
+    width: 36px;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -41,17 +46,23 @@ div#meh {
     pointer-events: auto;
 
     div {
-      float: left;
+      // float: left;
       width: 36px;
       height: 36px;
-      margin-right: 1px;
+      // margin-bottom: 1px !im;
+      position: relative;
+      z-index: 99;
     }
     div#a { background: black;}
     div#b { background: gray;}
     div#c { background: #ccc;}
 
     div.selected {
-      outline: 2px solid white;
+      z-index: 100;
+      // outline: 2px solid white;
+      box-shadow:
+        0 0 0 1px hsl(0, 0%, 100%),
+        0 0 0 2px hsl(0, 0%, 20%);
     }
   }
 
@@ -59,8 +70,8 @@ div#meh {
     z-index: 20000;
     position: absolute;
     bottom: 20px;
-    left: 140px;
-    right: 140px;
+    left: 10%;
+    right: 10%;
     color: #eee;
     background: rgba(90,90,90,0.7);
     .message {
@@ -72,11 +83,23 @@ div#meh {
       position: relative;
     }
     .bar {
-      height: 24px;
-      background: red;
+      height: 16px;
+      background: #fff;
     }
   }
 
+}
+
+div.leaflet-control-attribution {
+  display: none !important;
+}
+
+div.leaflet-control-zoom {
+  // .leaflet-control-zoom-out leaflet-control-zoom-in
+  > a {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }
 
 
@@ -107,9 +130,6 @@ div#meh {
     -webkit-border-radius: 4px !important;
     border-radius: 0 !important;
     padding: 0px 0 1px 0 !important;
-
-
-    
 
 
     div.venue {
