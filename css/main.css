@@ -197,6 +197,9 @@ select {
 .wtf {
   outline: 2px solid red;
 }
+div#meh:hover {
+  cursor: pointer;
+}
 div#meh {
   position: absolute;
   top: 0;
@@ -205,6 +208,10 @@ div#meh {
   bottom: 0;
   z-index: 10000;
   pointer-events: none;
+}
+div#meh em {
+  color: #777;
+  font-style: normal;
 }
 div#meh .button {
   opacity: 1;
@@ -365,51 +372,75 @@ div.leaflet-control-zoom a:hover {
   left: 2px;
   font-size: 10px;
 }
-canvas {
-  opacity: 0.8;
-}
-#canvas canvas {
-  opacity: 0.6;
-}
-em {
-  color: #777;
-  font-style: normal;
-}
 body {
-  font-family: "Helvetica Neue", Sans;
+  font-family: "Helvetica Neue", Helvetica, Sans;
   padding: 0;
-  margin: 0;
-  line-height: 3.4em;
+  margin: 0 auto;
+  width: 800px;
+  color: #333;
 }
-html,
-body,
-#map,
-#canvas canvas {
-  height: 100%;
+#about,
+#intro {
+  width: 600px;
+  margin: 0 auto;
 }
-#canvas canvas {
-  position: absolute;
-  z-index: 10;
-  display: block;
-  pointer-events: none;
+#about {
+  color: #505050;
+}
+#about .dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-left: 4px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+}
+#about .red {
+  background: red;
+}
+#about .blue {
+  background: blue;
+}
+#about .green {
+  background: green;
+}
+#about .gray {
+  background: gray;
+}
+#container {
+  position: relative;
+  margin: 24px auto;
+  height: 400px;
+  width: 800px;
+  z-index: 9;
 }
 #map {
+  height: 100%;
   z-index: 9;
   display: block;
+}
+a {
+  color: #99f;
+}
+h1 {
+  font-size: 24px;
+  margin-top: 18px;
+  text-align: center;
+}
+h2 {
+  margin-top: 12px;
+  margin-bottom: -2px;
+}
+p {
+  line-height: 1.6em;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .foursquareauth {
   margin: 2em;
 }
 .foursquareauth p {
   font-weight: lighter;
-}
-a {
-  color: #99f;
-}
-h1 {
-  font-size: 2em;
-  font-weight: lighter;
-  padding-bottom: 12px;
 }
 .reload {
   display: none;

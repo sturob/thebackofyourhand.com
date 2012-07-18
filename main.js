@@ -47,7 +47,7 @@
 
     v.map.addLayer( cloudmade );
 
-    v.map.setView(new L.LatLng( 51.522, -0.118496 ), 14).addLayer(cloudmade);
+    v.map.setView(new L.LatLng( 51.52284331713511, -0.11260986328124999 ), 13).addLayer(cloudmade);
   
     $.getJSON('latest.json', function(code){
       window.initial = new Function('with (v.inputs) { ' + code.functions.initial + '\n } ' );
