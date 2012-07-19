@@ -44,14 +44,38 @@ body {
   }
 }
 
+
+.button.icon-resize-full-1  { display: block !important; }
+.button.icon-resize-small-1 { display: none !important; }
+
+body.fullscreen {
+  width: 100%;
+
+  #container {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }  
+  #about, #intro {
+    display: none;
+  }
+
+  .button.icon-resize-full-1  { display: none !important; }
+  .button.icon-resize-small-1 { display: block !important; }
+}
+
+
+
 #container {
   position: relative;
   margin: 24px auto;
   height: 400px;
   width: 800px;
   z-index: 9;
-
 }
+
+
 
 #map {
   height: 100%;

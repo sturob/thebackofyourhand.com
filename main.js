@@ -11,13 +11,13 @@
 
   $(function() {
 
-    $(window).bind('resize', function() {
-      $('canvas').attr({
-        width: window.innerWidth, height: window.innerHeight
-      });
-    });
+    // $(window).bind('resize', function() {
+    //   $('canvas').attr({
+    //     width: window.innerWidth, height: window.innerHeight
+    //   });
+    // });
 
-    $('body').trigger('resize');
+    // $('body').trigger('resize');
 
     var params = window.location.hash.substr(1).split('=');
 
@@ -39,11 +39,11 @@
     // })();
 
 
-    window.v.map = new L.Map('map');
+    window.v.map = new L.Map('map', { trackResize: true });
 
     var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/65711/256/{z}/{x}/{y}.png',
         cloudmadeAttribution = '©2012 OSM, CloudMade + foursquare',
-        cloudmade = new L.TileLayer(cloudmadeUrl, { maxZoom: 18,  detectRetina: true, attribution: cloudmadeAttribution });
+        cloudmade = new L.TileLayer(cloudmadeUrl, { maxZoom: 18, detectRetina: true, attribution: cloudmadeAttribution });
 
     v.map.addLayer( cloudmade );
 
@@ -55,7 +55,7 @@
 
       initial();
       instant();
-      window.onFrame = new Function('with (v.inputs) { ' + code.functions.paperjs + '\n } ' );
+      //window.onFrame = new Function('with (v.inputs) { ' + code.functions.paperjs + '\n } ' );
 
       //v.map.on('moveend', window.throttledFetch);
       //v.map.on('zoomend', window.refetch);
