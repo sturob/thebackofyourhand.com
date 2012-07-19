@@ -77,9 +77,16 @@ div#meh {
       position: relative;
       z-index: 99;
     }
-    div#a { background: black;}
-    div#b { background: gray;}
-    div#c { background: #ccc;}
+    div#a { 
+      // background-color: black;
+      background: black url(/data/modes_bg.png) 0 0;
+    }
+    div#b { 
+      background: gray url(/data/modes_bg.png) 0 144px;
+    }
+    div#c {
+      background: #ccc url(/data/modes_bg.png) 0 72px;
+    }
 
     div.selected {
       z-index: 100;
@@ -187,14 +194,15 @@ div.leaflet-control-zoom {
       b  {
         -webkit-border-radius: 8px;
         border-radius: 8px;
-        border: 1px solid rgba(0,0,0,0.3);
+        // border: 1px solid rgba(0,0,0,0.3);
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
         display: block;
         width: 8px;
         content: '';
         height: 8px;
         position: absolute;
         left: 0;
-        top: 4px;
+        top: 5px;
         padding: 0 !important;
       }
       a  {

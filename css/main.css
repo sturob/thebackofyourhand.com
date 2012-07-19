@@ -263,13 +263,13 @@ div#meh > div#bright_switch div {
   z-index: 99;
 }
 div#meh > div#bright_switch div#a {
-  background: black;
+  background: #000000 url(/data/modes_bg.png) 0 0;
 }
 div#meh > div#bright_switch div#b {
-  background: gray;
+  background: #808080 url(/data/modes_bg.png) 0 144px;
 }
 div#meh > div#bright_switch div#c {
-  background: #ccc;
+  background: #cccccc url(/data/modes_bg.png) 0 72px;
 }
 div#meh > div#bright_switch div.selected {
   z-index: 100;
@@ -355,14 +355,14 @@ div.leaflet-control-zoom a:hover {
 .leaflet-popup-content-wrapper div.venue b {
   -webkit-border-radius: 8px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
   display: block;
   width: 8px;
   content: '';
   height: 8px;
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 5px;
   padding: 0 !important;
 }
 .leaflet-popup-content-wrapper div.venue a {
@@ -409,18 +409,19 @@ body {
   margin-left: 4px;
   -webkit-border-radius: 9px;
   border-radius: 9px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
 #about .red {
-  background: red;
+  background: #f00;
 }
 #about .blue {
-  background: blue;
+  background: #00f;
 }
 #about .green {
-  background: green;
+  background: #0f0;
 }
 #about .gray {
-  background: gray;
+  background: #ccc;
 }
 .button.icon-resize-full-1 {
   display: block !important;
@@ -438,7 +439,8 @@ body.fullscreen #container {
   height: 100%;
 }
 body.fullscreen #about,
-body.fullscreen #intro {
+body.fullscreen #intro,
+body.fullscreen #attribution {
   display: none;
 }
 body.fullscreen .button.icon-resize-full-1 {
@@ -446,6 +448,13 @@ body.fullscreen .button.icon-resize-full-1 {
 }
 body.fullscreen .button.icon-resize-small-1 {
   display: block !important;
+}
+body.fullscreen #help_overlay {
+  font-size: 12px;
+}
+body.fullscreen #help_overlay h2,
+body.fullscreen #help_overlay p {
+  padding-left: 8px;
 }
 #container {
   position: relative;
