@@ -32,12 +32,10 @@
       loadjs('base/js/lib/less.js');
     }
 
-    CONFIG.fullscreen = false; // TODO iphone detection
   })();
   </script>
   
   <link rel="stylesheet" href="base/css/leaflet.css" type="text/css">
-
   <link rel="stylesheet" href="data/css/icons.css"><!--[if IE 7]>
   <link rel="stylesheet" href="data/css/icons-ie7.css"><![endif]-->
 
@@ -47,12 +45,18 @@
   <script src="base/js/lib/underscore.js"></script>
   <script src="base/js/lib/async.min.js"></script> 
   <script src="base/js/lib/one-color.js"></script> 
-
-
   <script src="base/js/utils.js"></script>
 
   <script  type="text/javascript">
     if (CONFIG.devMode) loadjs('base/js/dev.js');
+
+    //CONFIG.fullscreen = 
+    var wtf = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ); // mobile
+
+    $(function (){
+      CONFIG.fullscreen = wtf;
+      if (wtf) $('body').addClass('fullscreen');
+    });
   </script>
 
   <script src="main.js"></script>
@@ -64,7 +68,6 @@
 
   <div id="intro">  
     <h1>Re-Introducing London&hellip;</h1>
-    
     <!-- <p>Wander with purpose and get off the tourist trail. &nbsp; Here, have a play with London:</p> -->
   </div>
 
@@ -73,16 +76,14 @@
     <div id="meh"></div>
   </div>
 
-  <!-- <h2>More details</h2> -->
-  
-
   <div id="about">
+    <h2>What is this exactly?</h2>
+    <p>An interactive visualisation of Foursquare checkin history across London. Showing popular places to <span class="blue dot"></span> Eat <span class="red dot"></span> Drink <span class="green dot"></span> Shop <span class="gray dot"></span> Be Entertained<p>
+  
     <h2>Why?</h2>
-
     <p>When exploring new cities I want more than just a map of highways and buildings. I want an insight into what people do and where they do it.</p>
 
-    <h2>So what is it exactly?</h2>
-    <p>An interactive visualisation of Foursquare checkin history across London. Showing popular places to <span class="blue dot"></span> Eat <span class="red dot"></span> Drink <span class="green dot"></span> Shop <span class="gray dot"></span> Be entertained.<p>
+
 
     <h2>Why just London?</h2>
     <p>Because I live here (good for testing) and we're about the have the Olympics (good for tourism numbers). I plan to do more cities soon.</p>

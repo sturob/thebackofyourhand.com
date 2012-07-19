@@ -408,6 +408,12 @@ body {
 #about .gray {
   background: gray;
 }
+.button.icon-resize-full-1 {
+  display: block !important;
+}
+.button.icon-resize-small-1 {
+  display: none !important;
+}
 body.fullscreen {
   width: 100%;
 }
@@ -420,6 +426,12 @@ body.fullscreen #container {
 body.fullscreen #about,
 body.fullscreen #intro {
   display: none;
+}
+body.fullscreen .button.icon-resize-full-1 {
+  display: none !important;
+}
+body.fullscreen .button.icon-resize-small-1 {
+  display: block !important;
 }
 #container {
   position: relative;

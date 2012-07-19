@@ -11,14 +11,6 @@
 
   $(function() {
 
-    // $(window).bind('resize', function() {
-    //   $('canvas').attr({
-    //     width: window.innerWidth, height: window.innerHeight
-    //   });
-    // });
-
-    // $('body').trigger('resize');
-
     var params = window.location.hash.substr(1).split('=');
 
     // if (params.length > 1) {
@@ -78,13 +70,13 @@
 
       v.map.addLayer( circle );
 
-      _.delay(function(){ 
-        v.map.setZoom( 16 ); 
-      }, 1200);
+      // _.delay(function(){ 
+      //   v.map.setZoom( 16 ); 
+      // }, 1200);
 
       _.delay(function(){
-        if (v.brightSwitch.mode == 'a') v.brightSwitch( 'b' );
-      }, 1500);
+        if (ui.BrightSwitch.mode == 'a') ui.BrightSwitch.flick( 'b' );
+      }, 1000);
 
     }
 
