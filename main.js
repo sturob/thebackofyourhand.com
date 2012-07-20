@@ -61,23 +61,30 @@
     
     function onLocationFound(e) {
       var radius = e.accuracy / 2;
+      
+      var quad = v.QuadTree.get( e.latlng.getAllTiles()[10].join('/') )
+      
 
-      v.map.panTo( e.latlng );
+      var goHere = function(){
+        v.layergroup.clearLayers();
+          
+        var circle = new L.Circle(e.latlng, radius, { opacity: 1, color: '#fff', fillColor: '#0099ff'  });
+        v.layergroup.addLayer( circle );
+        v.map.panTo( e.latlng );
 
-      var circle = new L.Circle(e.latlng, radius, { 
-        color: '#fff', fillColor: '#fff' 
-      });
+        _.delay(function(){
+          if (ui.BrightSwitch.mode == 'a') ui.BrightSwitch.flick( 'b' );
+        }, 1000);
+      }
 
-      v.map.addLayer( circle );
-
-      // _.delay(function(){ 
-      //   v.map.setZoom( 16 ); 
-      // }, 1200);
-
-      _.delay(function(){
-        if (ui.BrightSwitch.mode == 'a') ui.BrightSwitch.flick( 'b' );
-      }, 1000);
-
+      if (_(quad.venues).size() == 0) {
+        if (prompt('You are outside of central London, if you continue' +
+                   ' there will be no venues for you to explore.')) {
+          goHere();
+        }
+      } else {
+        goHere();
+      }
     }
 
 
