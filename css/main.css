@@ -197,6 +197,9 @@ select {
 .wtf {
   outline: 2px solid red;
 }
+div#map {
+  background: black;
+}
 div#meh:hover {
   cursor: pointer;
 }
@@ -246,8 +249,8 @@ div#meh > div#locate {
 div#meh > div#bright_switch {
   width: 36px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 6px;
+  right: 6px;
   padding: 8px 8px 8px 9px;
   background-color: rgba(140, 140, 140, 0.6);
   pointer-events: auto;
@@ -300,6 +303,8 @@ div.leaflet-control-attribution {
 }
 div.leaflet-control-zoom {
   background: none;
+  margin-left: 2px !important;
+  margin-top: 2px !important;
 }
 div.leaflet-control-zoom > a {
   width: 32px !important;

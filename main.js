@@ -38,6 +38,7 @@
         cloudmade = new L.TileLayer(cloudmadeUrl, { maxZoom: 18, detectRetina: true, attribution: cloudmadeAttribution });
 
     v.map.addLayer( cloudmade );
+    v.cloudmade = cloudmade;
 
     v.map.setView(new L.LatLng( 51.52284331713511, -0.11260986328124999 ), 13).addLayer(cloudmade);
   
