@@ -55,6 +55,8 @@
 
       v.map.on('locationfound', onLocationFound);
 
+      v.cloudmade.setOpacity(0);
+
       v.dataPoint = '/data/';
       Categories.fetch( v.Venue.loadByCategory );
     });  
