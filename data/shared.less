@@ -14,10 +14,6 @@ div#meh {
 
   // line-height: 3.4em;
 
-  em {
-    color: #777;
-    font-style: normal;
-  }
 
   .button {
     opacity: 1;
@@ -163,7 +159,7 @@ div.leaflet-control-zoom {
   }
 
   .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-    background-color: rgba(255,255,255,0.8) !important;
+    background-color: rgba(255,255,255,0.85) !important;
     -webkit-box-shadow: 0 1px 14px rgba(0,0,0,0.5) !important;
     box-shadow: 0 1px 14px rgba(0,0,0,0.5) !important;
   }
@@ -180,7 +176,7 @@ div.leaflet-control-zoom {
   .leaflet-popup-content-wrapper {
     -webkit-border-radius: 4px !important;
     border-radius: 0 !important;
-    padding: 0px 0 1px 0 !important;
+    padding: 0px 0 4px 0 !important;
 
 
     div.venue {
@@ -209,27 +205,31 @@ div.leaflet-control-zoom {
         color: #333;
       }
       em {
-        padding-left: 2px;
+        color: #666 !important;
+        font-style: normal;
+        padding-left: 3px;
       }
     }
 
     div.postcodes {
       position: absolute;
-      bottom: -2px;
-      right: 2px;
-      color: #ddd;
-      font-size: 10px;
-      text-shadow: 0px 2px 2px #000;
+      bottom: 16px;
+      right: 4px;
+      color: #666;
+      font-size: 9px;
+      // text-shadow: 0px 2px 2px #000;
     }
 
     div.others {
-      color: #ddd;
-      text-shadow: 0px 2px 2px #000;
+      color: #666;
+      text-transform: uppercase;
+      // text-shadow: 0px 2px 2px #000;
       position: absolute;
-      bottom: -2px;
-      left: 2px;
-      font-size: 10px;
-      // text-align: center;
+      bottom: 16px;
+      left: 0px;
+      right: 0;
+      font-size: 9px;
+      text-align: center;
       // right: 0;
     }
 
