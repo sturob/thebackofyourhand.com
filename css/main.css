@@ -287,7 +287,7 @@ div#meh #progress .message {
   position: absolute;
   left: 8px;
   top: 8px;
-  font-size: 18px;
+  font-size: 16px;
   z-index: 99999;
   text-shadow: 0px 2px 2px #000, 0px 0px 12px #000;
 }
@@ -405,10 +405,12 @@ body {
   width: 600px;
   margin: 0 auto;
 }
-#about {
+#about,
+#help_overlay {
   color: #505050;
 }
-#about .dot {
+#about .dot,
+#help_overlay .dot {
   display: inline-block;
   height: 12px;
   width: 12px;
@@ -417,16 +419,20 @@ body {
   border-radius: 9px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
-#about .red {
+#about .red,
+#help_overlay .red {
   background: #f00;
 }
-#about .blue {
+#about .blue,
+#help_overlay .blue {
   background: #00f;
 }
-#about .green {
+#about .green,
+#help_overlay .green {
   background: #0f0;
 }
-#about .gray {
+#about .gray,
+#help_overlay .gray {
   background: #ccc;
 }
 .button.icon-resize-full-1 {
